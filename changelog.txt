@@ -1,9 +1,12 @@
-Version 2.0
+Version 2.1 (Feb 5, 2024)
+- added "HHP <=> Constitution"
+================
+Version 2.0 (Feb 5, 2024)
 - implemented the ability to add user forms for calc
 - update "Common craft / Builds"
 - update "Smith"
 ================
-Version 1.1
+Version 1.1 (Sep 13, 2022)
 - added "Tree plant"
 - added "Garden pot plant"
 - added "Common craft / Builds"

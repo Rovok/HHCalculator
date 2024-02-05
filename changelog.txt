@@ -1,8 +1,13 @@
-Версия 1.1
-- добавлен "Высадка деревьев"
-- добавлен "Высадка садовых растений"
-- добавлен "Обычный крафт"
+Version 2.0
+- implemented the ability to add user forms for calc
+- update "Common craft / Builds"
+- update "Smith"
 ================
-Версия 1.0
-- добавлен "Ковка"
-- добавлен "Coade глина"
+Version 1.1
+- added "Tree plant"
+- added "Garden pot plant"
+- added "Common craft / Builds"
+================
+Version 1.0
+- added "Smith"
+- added "Coade clay"

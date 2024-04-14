@@ -1,6 +1,6 @@
 ﻿namespace HHCalculator
 {
-    partial class FormHHP
+    partial class ConstitutionAndHHP
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace HHCalculator
 {
-    partial class FormUI
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.

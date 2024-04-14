@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace HHCalculator
 {
-    public partial class FormCommonCraft : Form
+    public partial class CommonCraft : Form
     {
         private static Control[] Entries = new Control[10];
-        public FormCommonCraft()
+        public CommonCraft()
         {
             InitializeComponent();
             this.Text = "Крафт / Строительство";

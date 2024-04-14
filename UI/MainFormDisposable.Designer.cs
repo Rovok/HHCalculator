@@ -1,6 +1,6 @@
 ﻿namespace HHCalculator
 {
-    partial class FormMain
+    partial class MainFormDisposable
     {
         /// <summary>
         /// Обязательная переменная конструктора.

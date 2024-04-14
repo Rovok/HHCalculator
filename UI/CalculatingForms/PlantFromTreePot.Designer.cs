@@ -1,6 +1,6 @@
 ﻿namespace HHCalculator
 {
-    partial class FormTreePot
+    partial class PlantFromTreePot
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HHCalculator
 {
-    public partial class FormBoardAndBranch : Form
+    public partial class BoardAndBranch : Form
     {
-        public FormBoardAndBranch()
+        public BoardAndBranch()
         {
             InitializeComponent();
         }

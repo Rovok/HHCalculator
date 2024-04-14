@@ -8,7 +8,7 @@ namespace HHCalculator
 {
     internal static class Program
     {
-        public static FormMain MainForm;
+        public static MainFormDisposable MainForm;
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -17,7 +17,7 @@ namespace HHCalculator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain(args));
+            Application.Run(new Controller(args));
         }
     }
 }

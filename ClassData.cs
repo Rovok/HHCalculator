@@ -19,19 +19,19 @@ namespace HHCalculator
         public static readonly string UpdateInfoLink = "https://raw.githubusercontent.com/Rovok/HHCalculator/main/Info.txt";
         public static readonly string UpdaterLink = "https://github.com/Rovok/Updater/raw/main/Updater.exe";
         public static readonly string UserFormsPath = ClassData.ApplicationFolder + "\\UserForms";
-        public static Form UI = new FormUI();
-        public static Form AddNew = new FormAddNew();
-        public static Form SettingsWindow = new FormSettings();
+        public static Form UI = new MainForm();
+        public static Form AddNew = new AddNew();
+        public static Form SettingsWindow = new Settings();
         public static readonly Dictionary<Form, string[]> InternalForms = new Dictionary<Form, string[]>()
             {
-                { new FormSmith(),          new string[2]{ "Ковка", String.Empty } },
-                { new FormWroughtIron(),    new string[2]{ "~~~~ $test: \"Кованое железо\" ~~~~", String.Empty } },
-                { new FormBoardAndBranch(), new string[2]{ "Доски / Ветки", String.Empty } },
-                { new FormCoade(),          new string[2]{ "Coade глина", String.Empty } },
-                { new FormTreePot(),        new string[2]{ "Высадка деревьев", String.Empty } },
-                { new FormGardenPot(),      new string[2]{ "Высадка садовых растений", String.Empty } },
-                { new FormCommonCraft(),    new string[2]{ "Крафт / Строительство", String.Empty } },
-                { new FormHHP(),            new string[2]{ "HHP <=> Телосложение", String.Empty } }
+                { new Smithing(),          new string[2]{ "Ковка", String.Empty } },
+                { new WroughtIron(),    new string[2]{ "~~~~ $test: \"Кованое железо\" ~~~~", String.Empty } },
+                { new BoardAndBranch(), new string[2]{ "Доски / Ветки", String.Empty } },
+                { new CoadeClay(),          new string[2]{ "Coade глина", String.Empty } },
+                { new PlantFromTreePot(),        new string[2]{ "Высадка деревьев", String.Empty } },
+                { new PlantInGardenPot(),      new string[2]{ "Высадка садовых растений", String.Empty } },
+                { new CommonCraft(),    new string[2]{ "Крафт / Строительство", String.Empty } },
+                { new ConstitutionAndHHP(),            new string[2]{ "HHP <=> Телосложение", String.Empty } }
             };
         public static Dictionary<int, string> ExternalForms = new Dictionary<int, string>();
         public static Dictionary<int, Form> FormNumbers = new Dictionary<int, Form>();

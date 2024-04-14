@@ -11,9 +11,9 @@ using System.IO;
 
 namespace HHCalculator
 {
-    public partial class FormUI : Form
+    public partial class MainForm : Form
     {
-        public FormUI()
+        public MainForm()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;

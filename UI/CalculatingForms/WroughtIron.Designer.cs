@@ -1,6 +1,6 @@
 ﻿namespace HHCalculator
 {
-    partial class FormWroughtIron
+    partial class WroughtIron
     {
         /// <summary>
         /// Required designer variable.

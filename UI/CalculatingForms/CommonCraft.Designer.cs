@@ -1,6 +1,6 @@
 ﻿namespace HHCalculator
 {
-    partial class FormCommonCraft
+    partial class CommonCraft
     {
         /// <summary>
         /// Required designer variable.

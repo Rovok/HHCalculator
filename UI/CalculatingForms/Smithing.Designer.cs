@@ -1,6 +1,6 @@
 ﻿namespace HHCalculator
 {
-    partial class FormSmith
+    partial class Smithing
     {
         /// <summary>
         /// Required designer variable.

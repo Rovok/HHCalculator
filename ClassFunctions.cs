@@ -158,9 +158,9 @@ namespace HHCalculator
                     value = double.Parse(temp[1]);
                     result.Add(temp[0], value);
                 }
-                catch (FormatException e)
+                catch (FormatException)
                 {
-                    throw e;
+                    continue;
                 }
             }
             return result;
@@ -168,9 +168,9 @@ namespace HHCalculator
 
         public static void UpdateQualitiesDict(Dictionary<string, double> newQualities)
         {
-            foreach (string key in ClassData.Qualities.Keys)
+            foreach (string key in newQualities.Keys)
             {
-                if (newQualities.ContainsKey(key))
+                if (ClassData.Qualities.ContainsKey(key))
                 {
                     ClassData.Qualities[key] = newQualities[key];
                 }

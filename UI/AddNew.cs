@@ -13,11 +13,11 @@ using System.IO;
 
 namespace HHCalculator
 {
-    public partial class FormAddNew : Form
+    public partial class AddNew : Form
     {
         int EnterStrings = 0;
         int OutStrings = 0;
-        public FormAddNew()
+        public AddNew()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -257,7 +257,7 @@ namespace HHCalculator
                 doc.Save(ClassData.UserFormsPath + "\\userform_" + Number.ToString() + ".xml");
                 //ClassFunctions.FillMainForm();
                 this.Hide();
-                ClassData.AddNew = new FormAddNew();
+                ClassData.AddNew = new AddNew();
             }
         }
 

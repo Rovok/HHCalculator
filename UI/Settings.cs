@@ -11,10 +11,10 @@ using System.IO;
 
 namespace HHCalculator
 {
-    public partial class FormSettings : Form
+    public partial class Settings : Form
     {
         private bool edited = false;
-        public FormSettings()
+        public Settings()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;

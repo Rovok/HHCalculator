@@ -1,6 +1,6 @@
 ﻿namespace HHCalculator
 {
-    partial class FormAddNew
+    partial class AddNew
     {
         /// <summary>
         /// Required designer variable.

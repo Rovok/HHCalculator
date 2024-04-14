@@ -1,6 +1,6 @@
 ﻿namespace HHCalculator
 {
-    partial class FormSettings
+    partial class Settings
     {
         /// <summary>
         /// Required designer variable.

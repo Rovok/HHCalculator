@@ -62,118 +62,119 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller.cs" />
     <Compile Include="ClassData.cs" />
     <Compile Include="ClassFormulas.cs" />
     <Compile Include="ClassFunctions.cs" />
-    <Compile Include="FormBoardAndBranch.cs">
+    <Compile Include="UI\CalculatingForms\BoardAndBranch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBoardAndBranch.Designer.cs">
-      <DependentUpon>FormBoardAndBranch.cs</DependentUpon>
+    <Compile Include="UI\CalculatingForms\BoardAndBranch.Designer.cs">
+      <DependentUpon>BoardAndBranch.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormHHP.cs">
+    <Compile Include="UI\CalculatingForms\ConstitutionAndHHP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormHHP.Designer.cs">
-      <DependentUpon>FormHHP.cs</DependentUpon>
+    <Compile Include="UI\CalculatingForms\ConstitutionAndHHP.Designer.cs">
+      <DependentUpon>ConstitutionAndHHP.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMain.cs">
+    <Compile Include="UI\MainFormDisposable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain.Designer.cs">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <Compile Include="UI\MainFormDisposable.Designer.cs">
+      <DependentUpon>MainFormDisposable.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSettings.cs">
+    <Compile Include="UI\Settings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSettings.Designer.cs">
-      <DependentUpon>FormSettings.cs</DependentUpon>
+    <Compile Include="UI\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSmith.cs">
+    <Compile Include="UI\CalculatingForms\Smithing.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSmith.Designer.cs">
-      <DependentUpon>FormSmith.cs</DependentUpon>
+    <Compile Include="UI\CalculatingForms\Smithing.Designer.cs">
+      <DependentUpon>Smithing.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCoade.cs">
+    <Compile Include="UI\CalculatingForms\CoadeClay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCoade.Designer.cs">
-      <DependentUpon>FormCoade.cs</DependentUpon>
+    <Compile Include="UI\CalculatingForms\CoadeClay.Designer.cs">
+      <DependentUpon>CoadeClay.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddNew.cs">
+    <Compile Include="UI\AddNew.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddNew.Designer.cs">
-      <DependentUpon>FormAddNew.cs</DependentUpon>
+    <Compile Include="UI\AddNew.Designer.cs">
+      <DependentUpon>AddNew.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCommonCraft.cs">
+    <Compile Include="UI\CalculatingForms\CommonCraft.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCommonCraft.Designer.cs">
-      <DependentUpon>FormCommonCraft.cs</DependentUpon>
+    <Compile Include="UI\CalculatingForms\CommonCraft.Designer.cs">
+      <DependentUpon>CommonCraft.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTreePot.cs">
+    <Compile Include="UI\CalculatingForms\PlantFromTreePot.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTreePot.Designer.cs">
-      <DependentUpon>FormTreePot.cs</DependentUpon>
+    <Compile Include="UI\CalculatingForms\PlantFromTreePot.Designer.cs">
+      <DependentUpon>PlantFromTreePot.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormGardenPot.cs">
+    <Compile Include="UI\CalculatingForms\PlantInGardenPot.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormGardenPot.Designer.cs">
-      <DependentUpon>FormGardenPot.cs</DependentUpon>
+    <Compile Include="UI\CalculatingForms\PlantInGardenPot.Designer.cs">
+      <DependentUpon>PlantInGardenPot.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI.cs">
+    <Compile Include="UI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI.Designer.cs">
-      <DependentUpon>FormUI.cs</DependentUpon>
+    <Compile Include="UI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormWroughtIron.cs">
+    <Compile Include="UI\CalculatingForms\WroughtIron.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormWroughtIron.Designer.cs">
-      <DependentUpon>FormWroughtIron.cs</DependentUpon>
+    <Compile Include="UI\CalculatingForms\WroughtIron.Designer.cs">
+      <DependentUpon>WroughtIron.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormBoardAndBranch.resx">
-      <DependentUpon>FormBoardAndBranch.cs</DependentUpon>
+    <EmbeddedResource Include="UI\CalculatingForms\BoardAndBranch.resx">
+      <DependentUpon>BoardAndBranch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormHHP.resx">
-      <DependentUpon>FormHHP.cs</DependentUpon>
+    <EmbeddedResource Include="UI\CalculatingForms\ConstitutionAndHHP.resx">
+      <DependentUpon>ConstitutionAndHHP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <EmbeddedResource Include="UI\FormMain.resx">
+      <DependentUpon>MainFormDisposable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSettings.resx">
-      <DependentUpon>FormSettings.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSmith.resx">
-      <DependentUpon>FormSmith.cs</DependentUpon>
+    <EmbeddedResource Include="UI\CalculatingForms\Smithing.resx">
+      <DependentUpon>Smithing.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCoade.resx">
-      <DependentUpon>FormCoade.cs</DependentUpon>
+    <EmbeddedResource Include="UI\CalculatingForms\CoadeClay.resx">
+      <DependentUpon>CoadeClay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddNew.resx">
-      <DependentUpon>FormAddNew.cs</DependentUpon>
+    <EmbeddedResource Include="UI\AddNew.resx">
+      <DependentUpon>AddNew.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCommonCraft.resx">
-      <DependentUpon>FormCommonCraft.cs</DependentUpon>
+    <EmbeddedResource Include="UI\CalculatingForms\CommonCraft.resx">
+      <DependentUpon>CommonCraft.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormGardenPot.resx">
-      <DependentUpon>FormGardenPot.cs</DependentUpon>
+    <EmbeddedResource Include="UI\CalculatingForms\PlantInGardenPot.resx">
+      <DependentUpon>PlantInGardenPot.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTreePot.resx">
-      <DependentUpon>FormTreePot.cs</DependentUpon>
+    <EmbeddedResource Include="UI\CalculatingForms\PlantFromTreePot.resx">
+      <DependentUpon>PlantFromTreePot.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI.resx">
-      <DependentUpon>FormUI.cs</DependentUpon>
+    <EmbeddedResource Include="UI\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormWroughtIron.resx">
-      <DependentUpon>FormWroughtIron.cs</DependentUpon>
+    <EmbeddedResource Include="UI\CalculatingForms\WroughtIron.resx">
+      <DependentUpon>WroughtIron.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -209,6 +210,13 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="changelog.txt" />
+    <Content Include="Info.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="QualitiesDB\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

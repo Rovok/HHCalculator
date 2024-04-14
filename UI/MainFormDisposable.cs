@@ -14,27 +14,16 @@ using System.Xml.Linq;
 
 namespace HHCalculator
 {
-    public partial class FormMain : Form
+    public partial class MainFormDisposable : Form
     {
-        public FormMain(string[] args)
+        public MainFormDisposable(string[] args)
         {
             Program.MainForm = this;
             InitializeComponent();
             //this.StartPosition = FormStartPosition.CenterScreen;
             this.StartPosition = FormStartPosition.Manual;
             this.Size = new Size(10, 10);
-            UpdateCheck();
-            if (args.Length > 0)
-            {
-                if (args[0] == "-firstrun")
-                {
-                    File.Delete(ClassData.ApplicationFolder + "\\" + "changelog.txt");
-                    WebClient webClient = new WebClient();
-                    webClient.DownloadFile("https://raw.githubusercontent.com/Rovok/HHCalculator/main/changelog.txt", ClassData.ApplicationFolder + "\\" + "changelog.txt");
-                    webClient.Dispose();
-                    Process.Start("notepad.exe", ClassData.ApplicationFolder + "\\" + "changelog.txt");
-                }
-            }
+            //UpdateCheck();
         }
 
         private void FormMain_Shown(object sender, EventArgs e)
@@ -191,59 +180,59 @@ namespace HHCalculator
                 btnSelect.Enabled = true;
         }
 
-        private void UpdateCheck()
-        {
-            try
-            {
-                WebClient FirstWebClient = new WebClient();
-                ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
-                Stream FirstStream = FirstWebClient.OpenRead(ClassData.UpdateInfoLink);
-                StreamReader FirstSR = new StreamReader(FirstStream);
-                string[] InfoLines = new string[0];
-                string TempLine = string.Empty;
-                string NewVersion = string.Empty;
-                while ((TempLine = FirstSR.ReadLine()) != null)
-                {
-                    Array.Resize(ref InfoLines, InfoLines.Length + 1);
-                    InfoLines[InfoLines.Length - 1] = TempLine;
-                    if (InfoLines[InfoLines.Length - 1].Contains("Version"))
-                    {
-                        FirstStream.Close();
-                        NewVersion = InfoLines[InfoLines.Length - 1].Split('=')[1];
-                        break;
-                    }
-                }
-                FirstStream.Close();
-                if (NewVersion == string.Empty) CouldntUpdate("Отсутствует упоминание версии");
-                string[] LocalVersionArray = ClassData.Version.Split('.').ToArray();
-                string[] NewVersionArray = NewVersion.Split('.').ToArray();
-                bool NeedToUpdate = false;
-                if (Int32.Parse(LocalVersionArray[0]) < Int32.Parse(NewVersionArray[0]))
-                {
-                    NeedToUpdate = true;
-                }
-                else if (Int32.Parse(LocalVersionArray[0]) == Int32.Parse(NewVersionArray[0]))
-                {
-                    if (Int32.Parse(LocalVersionArray[1]) < Int32.Parse(NewVersionArray[1])) NeedToUpdate = true;
-                }
-                if (NeedToUpdate)
-                {
-                    if (!File.Exists(ClassData.ApplicationFolder + "\\" + "Updater.exe")) FirstWebClient.DownloadFile(ClassData.UpdaterLink, ClassData.ApplicationFolder + "\\" + "Updater.exe");
-                    ProcessStartInfo StartInfo = new ProcessStartInfo(ClassData.ApplicationFolder + "\\" + "Updater.exe");
-                    StartInfo.Arguments = ClassData.UpdateDownloadLink + " " + ClassData.UpdateInfoLink + " " + Application.ExecutablePath;
-                    Process Updater = new Process();
-                    Updater.StartInfo = StartInfo;
-                    Updater.Start();
-                    Environment.Exit(0);
-                }
-                FirstWebClient.Dispose();
-            }
-            catch (System.Net.WebException e)
-            {
-                MessageBox.Show(e.Message, "Не удалось произвести обновление");
-                Environment.Exit(0);
-            }
-        }
+        //private void UpdateCheck()
+        //{
+        //    try
+        //    {
+        //        WebClient FirstWebClient = new WebClient();
+        //        ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
+        //        Stream FirstStream = FirstWebClient.OpenRead(ClassData.UpdateInfoLink);
+        //        StreamReader FirstSR = new StreamReader(FirstStream);
+        //        string[] InfoLines = new string[0];
+        //        string TempLine = string.Empty;
+        //        string NewVersion = string.Empty;
+        //        while ((TempLine = FirstSR.ReadLine()) != null)
+        //        {
+        //            Array.Resize(ref InfoLines, InfoLines.Length + 1);
+        //            InfoLines[InfoLines.Length - 1] = TempLine;
+        //            if (InfoLines[InfoLines.Length - 1].Contains("Version"))
+        //            {
+        //                FirstStream.Close();
+        //                NewVersion = InfoLines[InfoLines.Length - 1].Split('=')[1];
+        //                break;
+        //            }
+        //        }
+        //        FirstStream.Close();
+        //        if (NewVersion == string.Empty) CouldntUpdate("Отсутствует упоминание версии");
+        //        string[] LocalVersionArray = ClassData.Version.Split('.').ToArray();
+        //        string[] NewVersionArray = NewVersion.Split('.').ToArray();
+        //        bool NeedToUpdate = false;
+        //        if (Int32.Parse(LocalVersionArray[0]) < Int32.Parse(NewVersionArray[0]))
+        //        {
+        //            NeedToUpdate = true;
+        //        }
+        //        else if (Int32.Parse(LocalVersionArray[0]) == Int32.Parse(NewVersionArray[0]))
+        //        {
+        //            if (Int32.Parse(LocalVersionArray[1]) < Int32.Parse(NewVersionArray[1])) NeedToUpdate = true;
+        //        }
+        //        if (NeedToUpdate)
+        //        {
+        //            if (!File.Exists(ClassData.ApplicationFolder + "\\" + "Updater.exe")) FirstWebClient.DownloadFile(ClassData.UpdaterLink, ClassData.ApplicationFolder + "\\" + "Updater.exe");
+        //            ProcessStartInfo StartInfo = new ProcessStartInfo(ClassData.ApplicationFolder + "\\" + "Updater.exe");
+        //            StartInfo.Arguments = ClassData.UpdateDownloadLink + " " + ClassData.UpdateInfoLink + " " + Application.ExecutablePath;
+        //            Process Updater = new Process();
+        //            Updater.StartInfo = StartInfo;
+        //            Updater.Start();
+        //            Environment.Exit(0);
+        //        }
+        //        FirstWebClient.Dispose();
+        //    }
+        //    catch (System.Net.WebException e)
+        //    {
+        //        MessageBox.Show(e.Message, "Не удалось произвести обновление");
+        //        Environment.Exit(0);
+        //    }
+        //}
 
         private static void CouldntUpdate(string msg)
         {

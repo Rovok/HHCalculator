@@ -1,6 +1,6 @@
 ﻿namespace HHCalculator
 {
-    partial class FormBoardAndBranch
+    partial class BoardAndBranch
     {
         /// <summary>
         /// Required designer variable.

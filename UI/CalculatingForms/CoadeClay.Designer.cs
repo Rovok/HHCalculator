@@ -1,6 +1,6 @@
 ﻿namespace HHCalculator
 {
-    partial class FormCoade
+    partial class CoadeClay
     {
         /// <summary>
         /// Required designer variable.

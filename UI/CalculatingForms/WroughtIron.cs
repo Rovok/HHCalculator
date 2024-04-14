@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace HHCalculator
 {
-    public partial class FormWroughtIron : Form
+    public partial class WroughtIron : Form
     {
         private double[] smithVars = new double[3];
-        public FormWroughtIron()
+        public WroughtIron()
         {
             InitializeComponent();
         }

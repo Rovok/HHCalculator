@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace HHCalculator
 {
-    public partial class FormSmith : Form
+    public partial class Smithing : Form
     {
         private static Control[] Entries = new Control[5];
-        public FormSmith()
+        public Smithing()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;

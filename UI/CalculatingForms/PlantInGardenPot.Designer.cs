@@ -1,6 +1,6 @@
 ﻿namespace HHCalculator
 {
-    partial class FormGardenPot
+    partial class PlantInGardenPot
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HHCalculator
 {
-    public partial class FormCoade : Form
+    public partial class CoadeClay : Form
     {
-        public FormCoade()
+        public CoadeClay()
         {
             InitializeComponent();
             buttonCalc.Location = new Point(this.ClientSize.Width / 2 - buttonCalc.Width / 2, 355);
